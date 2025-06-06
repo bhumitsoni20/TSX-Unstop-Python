@@ -1,0 +1,245 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f1f1f1;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid #222;
+}
+
+.profile-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+.profile-img img:hover {
+  transform: scale(1.05);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.hero h1 span {
+  color: #c0a875;
+  font-style: italic;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 450px;
+  line-height: 1.6;
+  color: #ccc;
+}
+.hero .btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(to right, #c0a875, #a88f66);
+  color: #0d0d0d;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+.hero .btn:hover {
+  background: linear-gradient(to left, #c0a875, #a88f66);
+}
+
+/* Section Styling */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+  border-top: 1px solid #222;
+}
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #c0a875;
+  font-weight: 500;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  width: 280px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #f8f8f8;
+}
+.card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Work Gallery */
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding-top: 20px;
+}
+.work-item {
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+}
+.work-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+.work-item h3 {
+  margin-bottom: 10px;
+  color: #c0a875;
+}
+.work-item p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Contact Links */
+#contact a {
+  color: #c0a875;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d0d0d;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Navbar Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #222;
+}
+.logo {
+  font-size: 1.6rem;
+  color: #c0a875;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links li {
+  list-style: none;
+}
+
+/* Navigation Hover Animation */
+.nav-links li a {
+  position: relative;
+  padding: 8px 14px;
+  color: #eee;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  background: none;
+  border-radius: 0;
+}
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c0a875;
+  transition: width 0.3s ease;
+}
+.nav-links li a:hover::before {
+  width: 100%;
+}
+.nav-links li a:hover {
+  color: #c0a875;
+}
+
+/* Responsive Nav */
+.toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .toggle {
+    display: block;
+  }
+}
+
+/* Scroll To Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #c0a875;
+  color: #000;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: none;
+  transition: 0.3s ease;
+}
+#scrollToTopBtn:hover {
+  background-color: #a88f66;
+}

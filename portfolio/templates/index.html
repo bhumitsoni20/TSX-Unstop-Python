@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero" id="home">
+  <div class="profile-img">
+    <img src="{{ url_for('static', filename='images/bhumit.jpg') }}" alt="Bhumit Soni">
+  </div>
+  <h1>Web Designer<br><span>& Developer</span></h1>
+  <p>Crafting elegant websites using Python, Flask, HTML, CSS, and JavaScript.</p>
+  <a href="/resume" class="btn">Download Resume</a>
+</div>
+
+<!-- Services Section -->
+<div class="section" id="services">
+  <h2>My Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Web Design</h3>
+      <p>Modern, mobile-responsive and aesthetic interfaces that users love.</p>
+    </div>
+    <div class="card">
+      <h3>Development</h3>
+      <p>Flask apps, backend logic, and efficient database integration.</p>
+    </div>
+    <div class="card">
+      <h3>SEO & Content</h3>
+      <p>Optimized content structures to help your brand rank better.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Projects Section -->
+<div class="section" id="projects">
+  <h2>Selected Work</h2>
+  <div class="work-gallery">
+    <div class="work-item">
+      <h3>Job Portal Web App</h3>
+      <p>Flask-based job portal with authentication, resume uploads, and admin panel.</p>
+    </div>
+    <div class="work-item">
+      <h3>Library Management System</h3>
+      <p>SQLite-powered book tracking app with fine and user management.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="section" id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out via email or LinkedIn.</p>
+  <p>Email: <a href="mailto:sonibhumit196@gmail.com">sonibhumit196@gmail.com</a></p>
+  <p>Phone: <a href="tel:+916378905888">+91 6378905888</a></p>
+  <p><a href="https://www.linkedin.com/in/bhumit-soni/" target="_blank">LinkedIn Profile</a></p>
+</div>
+
+{% endblock %}
